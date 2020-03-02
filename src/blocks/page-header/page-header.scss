@@ -1,0 +1,59 @@
+.page-header {
+  position: sticky;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__mob {
+    padding-bottom: 16px;
+    background-color: $white;
+  }
+
+  &__mob-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  &__mob-bottom {
+
+  }
+
+  &__mob-nav {
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 10;
+  }
+
+  &__mob-nav-list {
+
+  }
+
+  &__mob-nav-item {
+
+  }
+
+  &__mob-nav-link {
+
+  }
+
+  &__mob-nav-service {
+
+  }
+
+  &__mob-nav-service-item {
+
+  }
+
+  &__mob-nav-service-link {
+
+  }
+
+  &__copyrights {
+
+  }
+}

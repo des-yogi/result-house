@@ -1,0 +1,73 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/mob-nav/mob-nav.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="mob-nav">content</div>
+
+-->
+
+
+<div class="modal  modal-menu  fade" id="mob-nav" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title  visually-hidden" id="ModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <nav class="mob-nav">
+          <ul class="list-nostyled  page-header__mob-nav-list">
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Typical Houses</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Cross Laminated Timber</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Infill Panels</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Glue Lam</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Projects</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">About Us</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <a href="#" class="page-header__mob-nav-link">Contact</a>
+            </li>
+            <li class="page-header__mob-nav-item">
+              <ul class="list-nostyled  page-header__mob-nav-service">
+                <li class="page-header__mob-nav-service-item">
+                  <a href="#" class="page-header__mob-nav-service-link">Sales</a>
+                </li>
+                <li class="page-header__mob-nav-service-item">
+                  <a href="#" class="page-header__mob-nav-service-link">Download</a>
+                </li>
+                <li class="page-header__mob-nav-service-item">
+                  <a href="#" class="page-header__mob-nav-service-link">Press</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="list-nostyled  page-header__copyrights">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li>© 2020. Rezult House</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

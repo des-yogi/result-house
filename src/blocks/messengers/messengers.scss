@@ -1,0 +1,91 @@
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  #{$block-name}__item + #{$block-name}__item {
+    margin-left: 16px;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &--tg {
+      background-size: 20px 16px;
+      background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--fb {
+      background-size: 18px 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/messenger-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/messenger-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--whatsapp {
+      background-size: 18px 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/whatsapp-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/whatsapp-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--viber {
+      background-size: 18px 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/viber-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/viber-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--line {
+      background-size: 18px 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/line-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/line-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--imo {
+      background-size: 18px 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/imo-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/imo-icon.svg', fill=$main-color);
+      }
+    }
+  }
+}
