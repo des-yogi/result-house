@@ -26,7 +26,8 @@
     "typo": [],
     "messengers": [],
     "service-nav": [],
-    "mob-nav": []
+    "mob-nav": [],
+    "aside-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

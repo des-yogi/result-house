@@ -25,6 +25,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    //position: relative;
   }
 
   &__content {
@@ -134,14 +136,10 @@ img {
 a {
   color: $link-color;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
-    color: $link-color--hover;
-  }
-
-  &:visited {
     color: $link-color--hover;
   }
 
@@ -253,6 +251,19 @@ a {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
+}
+
+.main {
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+}
+
+.content-col {
+  @include col(xs, 16);
+  @include col(md, 14);
+  @include col(lg, 15);
 }
 
 /* &__element {

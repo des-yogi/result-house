@@ -24,36 +24,53 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 $( document ).ready(function() {
 
+  if ( $( window ).width() < 768 ) {
+
+    new Mhead( '.page-header', {
+        scroll: {
+          hide: 200
+        }
+    });
+
+  } else return;
+
+
   $( window ).resize(function() {
 
     if ( $( window ).width() < 768 ) {
-      // new mhead( "#mob-header", {
-      //     scroll: {
-      //       pin: 100
-      //     }
-      // });
+
     }
+
   });
+
+  $('#desktop-nav').on('shown.bs.collapse', function () {
+    $('.aside-block__logo-col').focus();
+  })
 
 });
 
-document.addEventListener(
-        "DOMContentLoaded", () => {
-            new Mhead( '.page-header', {
-              scroll : {
-                hide: 200
-              },
-              // hooks: {
-              //  'scrolledIn': function () {
-              //    console.log('scrolledIn');
-              //  },
-              //  'scrolledOut': function () {
-              //    console.log('scrolledOut');
-              //  }
-              // }
-            });
-        }
-    );
+(function(){
+
+  window.onscroll = function() { scrollFunction() };
+
+  function scrollFunction() {
+
+    var headerDesktop = document.querySelector('.page-header__desktop');
+    var logoDesktop = headerDesktop.querySelector('.logo');
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      headerDesktop.style.padding = '10px 0';
+      logoDesktop.style.display = 'none';
+    } else {
+      headerDesktop.style.padding = '14px 0';
+      logoDesktop.style.display = 'inline-block';
+    }
+  }
+
+}());
+
+
+
 
 (function(){
 
