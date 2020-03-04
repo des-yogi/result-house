@@ -12,6 +12,18 @@
 
   @media (min-width: $screen-md) {
     display: block;
+    background-repeat: no-repeat;
+    background-position: left -90px bottom;
+    background-size: 632px 516px;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-position: left bottom;
+    background-size: 702px 573px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    background-size: 976px 797px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -58,21 +70,28 @@
     .row {
       padding-top: 32px;
       padding-bottom: 32px;
-      background-color: $white;
       pointer-events: auto;
     }
   }
 
   &__panel-col {
-    //@include col-offset(md, 14);
     @include col(md, 2);
     @include col(lg, 1);
     height: 100vh;
-    background-color: $white;
+    //background-color: $white;
+
+    @media (min-width: $screen-lg) {
+      background-color: $white;
+    }
+
+    @media (min-width: $screen-xxl) {
+      background-color: transparent;
+    }
   }
 
   &__logo-col {
     @include col(md, 6);
+    @include col(xl, 8);
 
     display: flex;
     flex-direction: column;
@@ -82,6 +101,7 @@
 
   &__text-col {
     @include col(md, 10)
+    @include col(xl, 8);
   }
 
   &__logo {
@@ -100,11 +120,102 @@
     }
   }
 
+  &__copyrights {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
   &__nav {
     padding-top: 60px;
 
     @media (min-width: $screen-xl) {
       padding-top: 80px;
+    }
+  }
+
+  &__nav-list {
+
+  }
+
+  &__nav-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 20px;
+      }
+    }
+
+    &.active {
+      //padding-left: 24px;
+      color: $main-color;
+
+      #{$block-name}__nav-link {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__nav-link {
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__service-item {
+    margin-right: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-right: 32px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      //padding-left: 24px;
+      color: $main-color;
+
+      #{$block-name}__service-link {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__service-link {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
     }
   }
 
@@ -114,6 +225,8 @@
     justify-content: space-between;
     height: 100vh;
     padding: 27px 0;
+    transform: translateX(5px);
+    background-color: $white;
     pointer-events: auto;
     overflow: auto;
 

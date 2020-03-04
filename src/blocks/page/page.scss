@@ -238,6 +238,21 @@ a {
     padding-left: calc(50% - #{$half-screen-xxl});
     padding-right: calc(50% - #{$half-screen-xxl});
   }
+
+  &--hidden-right {
+
+    @media (min-width: $screen-md) {
+      background: linear-gradient(to left, #fff, #fff 40px, rgba(255, 255, 255, 0) 40px, rgba(255, 255, 255, 0));
+    }
+
+    @media (min-width: $screen-xxl) {
+      $padding-min: 60px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+      $right-start: calc(50% - #{$half-screen-xxl});
+      background: linear-gradient(to left, #fff, #fff $right-start, rgba(255, 255, 255, 0) $right-start, rgba(255, 255, 255, 0));
+    }
+  }
 }
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;

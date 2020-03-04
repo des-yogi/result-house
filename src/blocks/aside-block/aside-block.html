@@ -2,13 +2,13 @@
 @ @include('blocks/aside-block/aside-block.html')
 -->
 
-<div class="container  aside-block">
-  <!-- <div class=""> -->
+<div class="aside-block">
+  <div class="container  container--hidden-right">
     <div class="row">
 
       <div class="aside-block__menu-col">
 
-        <div id="desktop-nav" class="row  collapse">
+        <div id="desktopNav" class="row  collapse">
 
           <div class="aside-block__logo-col">
 
@@ -27,24 +27,34 @@
           <div class="aside-block__text-col">
 
             <nav class="aside-block__nav">
-              <ul class="list-nostyled  ">
-                <li>
-                  <a href="">Пункт 1</a>
+              <ul class="list-nostyled  aside-block__nav-list">
+                <li class="aside-block__nav-item">
+                  <a href="#" class="aside-block__nav-link">Пункт 1</a>
                 </li>
-                <li>
-                  <a href="">Пункт 2</a>
+                <li class="aside-block__nav-item">
+                  <a href="#" class="aside-block__nav-link">Пункт 2</a>
                 </li>
-                <li>
-                  <a href="">Пункт 3</a>
+                <li class="aside-block__nav-item  active">
+                  <a href="#" class="aside-block__nav-link">Cross Laminated Timber</a>
                 </li>
-                <li>
-                  <a href="">Пункт 4</a>
+                <li class="aside-block__nav-item">
+                  <a href="#" class="aside-block__nav-link">Пункт 4</a>
                 </li>
-                <li>
-                  <a href="">Пункт 5</a>
+                <li class="aside-block__nav-item">
+                  <a href="#" class="aside-block__nav-link">Пункт 5</a>
                 </li>
-                <li>
-                  <a href="">Пункт 6</a>
+                <li class="aside-block__nav-item">
+                  <ul class="list-nostyled  aside-block__service">
+                    <li class="aside-block__service-item">
+                      <a href="#" class="aside-block__service-link">Sales</a>
+                    </li>
+                    <li class="aside-block__service-item">
+                      <a href="#" class="aside-block__service-link">Download</a>
+                    </li>
+                    <li class="aside-block__service-item">
+                      <a href="#" class="aside-block__service-link">Press</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </nav>
@@ -62,7 +72,7 @@
 
           <div class="service-nav">
 
-            <button class="btn  btn__icon  btn__icon--burger" type="button"  data-toggle="collapse" data-target="#desktop-nav" aria-expanded="false" aria-controls="desktop-nav" title="Открыть меню"></button>
+            <button class="btn  btn__icon  btn__icon--burger" type="button"  data-toggle="collapse" data-target="#desktopNav" aria-expanded="false" aria-controls="desktopNav" title="Открыть меню"></button>
 
             <button class="btn  btn__icon  btn__icon--search" type="button" title="Поиск по сайту"></button>
 
@@ -109,5 +119,5 @@
 
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 </div>

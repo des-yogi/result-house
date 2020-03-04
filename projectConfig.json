@@ -27,7 +27,8 @@
     "messengers": [],
     "service-nav": [],
     "mob-nav": [],
-    "aside-block": []
+    "aside-block": [],
+    "hero": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

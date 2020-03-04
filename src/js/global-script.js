@@ -22,31 +22,63 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 
 
-$( document ).ready(function() {
+$( document ).ready( function() {
 
   if ( $( window ).width() < 768 ) {
 
     new Mhead( '.page-header', {
         scroll: {
-          hide: 200
+          pin: 100
         }
     });
 
   } else return;
 
+});
 
-  $( window ).resize(function() {
+$( document ).ready( function() {
 
-    if ( $( window ).width() < 768 ) {
+  var mainContainer = document.querySelector('.aside-block');
+  if ( !mainContainer ) { return; }
+  var collapsibleElem = mainContainer.querySelector('#desktopNav');
+  var triggerBtn = mainContainer.querySelector('.btn__icon--burger');
+  var logoMenu = mainContainer.querySelector('.aside-block__logo');
 
+  var escHandler = function (e) {
+    if (e.keyCode === 27 || e.code === 'Escape') {
+      //console.log('Нажата клавиша Esc');
+      if ( collapsibleElem && collapsibleElem.classList.contains('show') ) {
+        mainContainer.style.backgroundColor = 'rgba(255,255,255,0)';
+        mainContainer.style.backgroundImage = 'none';
+        triggerBtn.classList.remove('btn__icon--burger--close');
+        document.querySelector('body').style.overflow = 'auto';
+        logoMenu.blur();
+        $('.collapse').collapse('hide');
+      }
     }
+  };
 
-  });
+  var menuToggleHandler = function (e) {
+    if ( collapsibleElem && !collapsibleElem.classList.contains('show') ) {
+      mainContainer.style.backgroundColor = 'rgba(255,255,255,1)';
+      mainContainer.style.backgroundImage = 'url(img/menu-bgr-desktop.svg)';
+      triggerBtn.classList.add('btn__icon--burger--close');
+      document.querySelector('body').style.overflow = 'hidden';
+      window.setTimeout( function () {
+        logoMenu.focus();
+      }, 100);
 
-  $('#desktop-nav').on('shown.bs.collapse', function () {
-    $('.aside-block__logo-col').focus();
-  })
+    } else {
+        mainContainer.style.backgroundColor = 'rgba(255,255,255,0)';
+        mainContainer.style.backgroundImage = 'none';
+        triggerBtn.classList.remove('btn__icon--burger--close');
+        document.querySelector('body').style.overflow = 'auto';
+        logoMenu.blur();
+    }
+  };
 
+  triggerBtn.addEventListener('click', menuToggleHandler);
+  window.addEventListener('keydown', escHandler);
 });
 
 (function(){
