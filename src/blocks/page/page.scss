@@ -206,6 +206,10 @@ a {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+
+  li::before {
+    display: none;
+  }
 }
 
 /* Кастомизируем выделение текста на сайте */
@@ -272,6 +276,35 @@ a {
 
   @media (min-width: $screen-md) {
     padding-top: 70px;
+  }
+}
+
+.divider {
+  display: block;
+  padding: 42px 0;
+  text-align: center;
+  line-height: 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+
+  span,
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: top;
+    width: 4px;
+    height: 4px;
+    margin: 0 32px;
+    background-color: $main-color;
+    border-radius: 50%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    margin: 0;
   }
 }
 

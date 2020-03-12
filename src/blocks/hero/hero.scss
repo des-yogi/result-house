@@ -1,22 +1,26 @@
 .hero {
-  width: 100%;
-  min-height: 150px;
+  position: relative;
   background-color: $white;
-  overflow: hidden;
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(..img/hero-bg.jpg); */
-
-  @media (min-width: $screen-xxl) {
-    max-height: 960px;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
-  img {
-    display: block;
-    width: 100%;
+  &__img {
+    min-height: 150px;
+    //max-height: 960px;
+
+    img {
+      display: block;
+    }
   }
 
+  &__title-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
 }

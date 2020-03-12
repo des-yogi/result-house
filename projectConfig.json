@@ -28,7 +28,10 @@
     "service-nav": [],
     "mob-nav": [],
     "aside-block": [],
-    "hero": []
+    "hero": [],
+    "socials": [],
+    "copyrights": [],
+    "full-width-slider": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
