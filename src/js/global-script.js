@@ -22,38 +22,87 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 
 
-$( document ).ready(function() {
+$( document ).ready( function() {
 
-  $( window ).resize(function() {
+  if ( $( window ).width() < 768 ) {
 
-    if ( $( window ).width() < 768 ) {
-      // new mhead( "#mob-header", {
-      //     scroll: {
-      //       pin: 100
-      //     }
-      // });
-    }
-  });
+    new Mhead( '.page-header', {
+        scroll: {
+          pin: 100
+        }
+    });
+
+  } else return;
 
 });
 
-document.addEventListener(
-        "DOMContentLoaded", () => {
-            new Mhead( '.page-header', {
-              scroll : {
-                hide: 200
-              },
-              // hooks: {
-              //  'scrolledIn': function () {
-              //    console.log('scrolledIn');
-              //  },
-              //  'scrolledOut': function () {
-              //    console.log('scrolledOut');
-              //  }
-              // }
-            });
-        }
-    );
+$( document ).ready( function() {
+
+  var mainContainer = document.querySelector('.aside-block');
+  if ( !mainContainer ) { return; }
+  var collapsibleElem = mainContainer.querySelector('#desktopNav');
+  var triggerBtn = mainContainer.querySelector('.btn__icon--burger');
+  var logoMenu = mainContainer.querySelector('.aside-block__logo');
+
+  var escHandler = function (e) {
+    if (e.keyCode === 27 || e.code === 'Escape') {
+      //console.log('Нажата клавиша Esc');
+      if ( collapsibleElem && collapsibleElem.classList.contains('show') ) {
+        mainContainer.style.backgroundColor = 'rgba(255,255,255,0)';
+        mainContainer.style.backgroundImage = 'none';
+        triggerBtn.classList.remove('btn__icon--burger--close');
+        document.querySelector('body').style.overflow = 'auto';
+        logoMenu.blur();
+        $('.collapse').collapse('hide');
+      }
+    }
+  };
+
+  var menuToggleHandler = function (e) {
+    if ( collapsibleElem && !collapsibleElem.classList.contains('show') ) {
+      mainContainer.style.backgroundColor = 'rgba(255,255,255,1)';
+      mainContainer.style.backgroundImage = 'url(img/menu-bgr-desktop.svg)';
+      triggerBtn.classList.add('btn__icon--burger--close');
+      document.querySelector('body').style.overflow = 'hidden';
+      window.setTimeout( function () {
+        logoMenu.focus();
+      }, 100);
+
+    } else {
+        mainContainer.style.backgroundColor = 'rgba(255,255,255,0)';
+        mainContainer.style.backgroundImage = 'none';
+        triggerBtn.classList.remove('btn__icon--burger--close');
+        document.querySelector('body').style.overflow = 'auto';
+        logoMenu.blur();
+    }
+  };
+
+  triggerBtn.addEventListener('click', menuToggleHandler);
+  window.addEventListener('keydown', escHandler);
+});
+
+(function(){
+
+  window.onscroll = function() { scrollFunction() };
+
+  function scrollFunction() {
+
+    var headerDesktop = document.querySelector('.page-header__desktop');
+    var logoDesktop = headerDesktop.querySelector('.logo');
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      headerDesktop.style.padding = '10px 0';
+      logoDesktop.style.display = 'none';
+    } else {
+      headerDesktop.style.padding = '14px 0';
+      logoDesktop.style.display = 'inline-block';
+    }
+  }
+
+}());
+
+
+
 
 (function(){
 

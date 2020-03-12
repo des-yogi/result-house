@@ -33,12 +33,18 @@
             </ul>
           </div>
 
-          <button class="btn  btn__icon  btn__icon--search" type="button"><span class="visually-hidden">Поиск по сайту</span></button>
+          <button class="btn  btn__icon  btn__icon--search" type="button" data-toggle="collapse" data-target="#mob-search" aria-expanded="false" aria-controls="mob-search" title="Поиск по сайту"></button>
 
-          <button class="btn  btn__icon  btn__icon--burger" type="button"  data-toggle="modal" data-target="#mob-nav"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="btn  btn__icon  btn__icon--burger" type="button"  data-toggle="modal" data-target="#mob-nav" title="Открыть меню"></button>
 
         </div>
 
+      </div>
+
+      <div id="mob-search" class="collapse  page-header__mob-search">
+        <form class="page-header__mob-search-form" action="#" method="post">
+          <input class="" type="search" value="" placeholder="Поиск…">
+        </form>
       </div>
 
       <div class="page-header__mob-bottom">
@@ -64,53 +70,42 @@
         </ul>
       </div>
 
-      <!-- <nav id="mob-nav" class="page-header__mob-nav">
-        <ul class="list-nostyled  page-header__mob-nav-list">
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Typical Houses</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Cross Laminated Timber</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Infill Panels</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Glue Lam</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Projects</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">About Us</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <a href="#" class="page-header__mob-nav-link">Contact</a>
-          </li>
-          <li class="page-header__mob-nav-item">
-            <ul class="list-nostyled  page-header__mob-nav-service">
-              <li class="page-header__mob-nav-service-item">
-                <a href="#" class="page-header__mob-nav-service-link">Sales</a>
-              </li>
-              <li class="page-header__mob-nav-service-item">
-                <a href="#" class="page-header__mob-nav-service-link">Download</a>
-              </li>
-              <li class="page-header__mob-nav-service-item">
-                <a href="#" class="page-header__mob-nav-service-link">Press</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="list-nostyled  page-header__copyrights">
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li>© 2020. Rezult House</li>
-        </ul>
-      </nav> -->
-
-    <!-- </div> -->
+    </div>
   </div>
 
-  <div class="page-header__desktop"></div>
+  <div class="page-header__desktop">
+
+    <div class="container  page-header__menu-wrapper">
+
+      <div class="row">
+
+        <div class="page-header__main-col">
+
+          <a href="index.html" class="logo">
+            <img src="img/rezult-house-short-logo.svg" alt="Logo" width="56" height="44">
+          </a>
+
+          <ul class="list-nostyled  page-header__short-menu">
+            <li class="page-header__short-menu-item">
+              <a class="page-header__short-menu-link" href="#">Typical Houses</a>
+            </li>
+            <li class="page-header__short-menu-item">
+              <a class="page-header__short-menu-link" href="#">Cross Laminated Timber</a>
+            </li>
+            <li class="page-header__short-menu-item">
+              <a class="page-header__short-menu-link" href="#">Infill Panels</a>
+            </li>
+            <li class="page-header__short-menu-item">
+              <a class="page-header__short-menu-link" href="#">Glue Lam</a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </header>

@@ -1,11 +1,21 @@
 .page-header {
   position: sticky;
 
+  @media (min-width: $screen-md) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__mob {
     padding-bottom: 16px;
     background-color: $white;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
   }
 
   &__mob-top {
@@ -14,6 +24,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
+  }
+
+  &__mob-search {
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    form {
+      width: 100%;
+    }
+
+    input[type=search] {
+      width: 100%;
+      padding: 7px 10px;
+    }
   }
 
   &__mob-bottom {
@@ -55,5 +79,60 @@
 
   &__copyrights {
 
+  }
+
+  &__desktop {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      padding: 14px 0;
+      background-color: $white;
+      transition: all 0.2s ease-out;
+    }
+
+    .logo {
+      margin-right: 24px;
+    }
+  }
+
+  &__menu-wrapper {
+
+  }
+
+  &__main-col {
+    @include col(md, 14);
+    @include col(lg, 15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__short-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-lg) {
+      margin: 0 auto;
+    }
+  }
+
+  &__short-menu-item {
+    margin-left: 20px;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 32px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__short-menu-link {
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+    color: initial;
   }
 }

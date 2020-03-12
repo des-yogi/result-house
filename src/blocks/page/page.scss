@@ -25,6 +25,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    //position: relative;
   }
 
   &__content {
@@ -134,14 +136,10 @@ img {
 a {
   color: $link-color;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
-    color: $link-color--hover;
-  }
-
-  &:visited {
     color: $link-color--hover;
   }
 
@@ -208,6 +206,10 @@ a {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+
+  li::before {
+    display: none;
+  }
 }
 
 /* Кастомизируем выделение текста на сайте */
@@ -240,6 +242,21 @@ a {
     padding-left: calc(50% - #{$half-screen-xxl});
     padding-right: calc(50% - #{$half-screen-xxl});
   }
+
+  &--hidden-right {
+
+    @media (min-width: $screen-md) {
+      background: linear-gradient(to left, #fff, #fff 40px, rgba(255, 255, 255, 0) 40px, rgba(255, 255, 255, 0));
+    }
+
+    @media (min-width: $screen-xxl) {
+      $padding-min: 60px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+      $right-start: calc(50% - #{$half-screen-xxl});
+      background: linear-gradient(to left, #fff, #fff $right-start, rgba(255, 255, 255, 0) $right-start, rgba(255, 255, 255, 0));
+    }
+  }
 }
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
@@ -253,6 +270,48 @@ a {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
+}
+
+.main {
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+}
+
+.divider {
+  display: block;
+  padding: 42px 0;
+  text-align: center;
+  line-height: 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+
+  span,
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: top;
+    width: 4px;
+    height: 4px;
+    margin: 0 32px;
+    background-color: $main-color;
+    border-radius: 50%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    margin: 0;
+  }
+}
+
+.content-col {
+  @include col(xs, 16);
+  @include col(md, 14);
+  @include col(lg, 15);
 }
 
 /* &__element {

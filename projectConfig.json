@@ -26,7 +26,12 @@
     "typo": [],
     "messengers": [],
     "service-nav": [],
-    "mob-nav": []
+    "mob-nav": [],
+    "aside-block": [],
+    "hero": [],
+    "socials": [],
+    "copyrights": [],
+    "full-width-slider": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

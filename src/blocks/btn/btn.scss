@@ -85,6 +85,28 @@
       &:focus {
         background-image: svg-load('../blocks/sprite-svg/svg/burger-icon.svg', fill=$main-color);
       }
+
+      &--close {
+        background-size: 20px 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$secondary-color);
+
+        &:hover,
+        &:focus {
+          background-size: 20px 20px;
+          background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$main-color);
+        }
+      }
+    }
+
+    &--close {
+      background-size: 20px 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-size: 20px 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$main-color);
+      }
     }
   }
 

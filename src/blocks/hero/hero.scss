@@ -1,0 +1,26 @@
+.hero {
+  position: relative;
+  background-color: $white;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    min-height: 150px;
+    //max-height: 960px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__title-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

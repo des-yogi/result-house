@@ -78,62 +78,106 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 42px;
+  margin-bottom: 16px;
   font-family: $font-family;
-  font-weight: 700;
-  line-height: 1.2;
-  //color: currentColor;
-}
 
-.h1,
-.h2,
-.h3,
-h1,
-h2,
-h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
+  @media (min-width: $screen-md) {
+    margin-top: 64px;
+  }
 
-.h4,
-.h5,
-.h6,
-h4,
-h5,
-h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  @media (min-width: $screen-xl) {
+    margin-bottom: 24px;
+  }
 }
 
 .h1,
 h1 {
-  //font-size: $font-size--h1;
+  margin-top: 0;
+  font-size: $font-size--h1;
+  font-weight: 900;
+  line-height: 30px;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size--h1 * 1.826;
+    line-height: 55px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size--h1 * 2.6;
+    line-height: 75px;
+  }
 }
 
 .h2,
 h2 {
-  //font-size: $font-size--h2;
+  font-size: $font-size--h2;
+  font-weight: 700;
+  line-height: 28px;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size--h2 * 1.455;
+    line-height: 45px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size--h2 * 1.91;
+    line-height: 55px;
+  }
 }
 
 .h3,
 h3 {
-  //font-size: $font-size--h3;
+  font-size: $font-size--h3;
+  font-weight: 600;
+  line-height: 25px;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size--h3 * 1.2;
+    line-height: 30px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size--h3 * 1.6;
+    line-height: 56px;
+  }
 }
 
 .h4,
 h4 {
-  //font-size: $font-size--h4;
+  font-size: $font-size--h4;
+  font-weight: 600;
+  line-height: 23px;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size--h4 * 1.111;
+    line-height: 25px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size--h4 * 1.556;
+    line-height: 35px;
+  }
 }
 
 .h5,
-h5 {
-  //font-size: $font-size--h5;
-}
-
 .h6,
+h5,
 h6 {
-  //font-size: $font-size--h6;
+  font-size: $font-size--h5;
+  font-weight: 600;
+  line-height: 20px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 16px;
+    font-size: $font-size--h5 * 1.25;
+    line-height: 24px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size--h5 * 1.5;
+    line-height: 30px;
+  }
 }
 
 .p,
@@ -145,12 +189,15 @@ blockquote,
 pre,
 address,
 figure {
-  //margin-top: 0.5em;
-  // margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
   color: currentColor;
 
   & + & {
     margin-top: 0.5em;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -158,9 +205,8 @@ address {
   font-style: normal;
 }
 
-ul,
 ol {
-  padding-left: 1.3em;
+  padding-left: 1.375em;
 }
 
 ol ol,
@@ -187,7 +233,7 @@ hr {
 
 .small,
 small {
-  font-size: $font-size * 0.75;
+  font-size: $font-size * 0.875;
 }
 
 sub,
@@ -281,22 +327,27 @@ pre {
     color: $second-color;
   }
 }
+ */
 
 ul {
-  li:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    width: 4px;
-    height: 4px;
-    margin-right: 0.7em;
-    margin-top: -3px;
-    border-radius: 50%;
-    background-color: $second-color;
+  padding-left: 22px;
+  list-style: none;
 
-    @media (min-width: $screen-xl) {
-      width: 5px;
-      height: 5px;
+  li {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: calc(0.5em + 3px);
+      left: -22px;
+      width: 6px;
+      height: 6px;
+      //margin-right: 16px;
+      //margin-top: -3px;
+      border-radius: 50%;
+      background-color: $main-color;
     }
   }
-} */
+}
