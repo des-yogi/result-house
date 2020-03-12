@@ -31,7 +31,11 @@
     "hero": [],
     "socials": [],
     "copyrights": [],
-    "full-width-slider": []
+    "full-width-slider": [],
+    "index-intro": [],
+    "index-features": [],
+    "download-panel": [],
+    "index-stages": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
