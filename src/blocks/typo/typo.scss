@@ -98,6 +98,10 @@ h1 {
   font-weight: 900;
   line-height: 30px;
 
+  @media (min-width: $screen-md) {
+    margin-top: 0;
+  }
+
   @media (min-width: $screen-xl) {
     font-size: $font-size--h1 * 1.826;
     line-height: 55px;
@@ -190,6 +194,7 @@ pre,
 address,
 figure {
   margin-bottom: 0.5em;
+  font-weight: inherit;
   color: currentColor;
 
   & + & {
@@ -331,6 +336,7 @@ pre {
 
 ul {
   padding-left: 22px;
+  margin: 0.5em 0;
   list-style: none;
 
   li {

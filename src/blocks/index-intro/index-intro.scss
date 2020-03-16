@@ -1,9 +1,19 @@
-// В этом файле должны быть стили для БЭМ-блока index-intro, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .index-intro {
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 11);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 9);
+  }
 }

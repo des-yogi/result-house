@@ -1,9 +1,21 @@
-// В этом файле должны быть стили для БЭМ-блока full-width-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .full-width-slider {
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__slide {
+
+    img {
+      display: block;
+    }
+
+    &.swiper-slide-active {
+      z-index: 1;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.06), 4px 0px 8px rgba(0, 0, 0, 0.06), 16px 0px 24px rgba(0, 0, 0, 0.06), 24px 0px 32px rgba(0, 0, 0, 0.08);
+    }
+  }
 }

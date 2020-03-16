@@ -42,7 +42,7 @@
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/css/swiper.min.css",
     "../../node_modules/mhead-js/dist/mhead.css",
-    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

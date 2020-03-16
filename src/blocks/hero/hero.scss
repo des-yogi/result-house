@@ -1,6 +1,11 @@
 .hero {
   position: relative;
   background-color: $white;
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 

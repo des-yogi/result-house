@@ -4,10 +4,11 @@
 
   box-sizing: border-box;
   display: inline-block;
-  margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
-  white-space: nowrap;
   vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 4px  $field-padding-horizontal;
+  white-space: nowrap;
   user-select: none;
   text-align: center;
   font-size: 16px;
@@ -16,33 +17,76 @@
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: $main-color;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  border: 2px solid $main-color;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
   cursor: pointer;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  &::before {
+    top: -2px;
+    left: 16px;
+  }
+
+  &::after {
+    bottom: -2px;
+    right: 16px;
+  }
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
+    color: $main-color;
     // background-color: darken($gray-lightest, 10%);
     // border-color: darken($gray-lighter, 12%);
+
+    &::before {
+      top: -2px;
+      left: initial;
+      right: 16px;
+    }
+
+    &::after {
+      bottom: -2px;
+      left: 16px;
+      right: initial;
+    }
   }
 
   &:active,
   &:focus {
-    // @include field-focus;
+    //@include field-focus;
   }
 
   &--disabled,
   &:disabled {
-    // opacity: $opacity;
+    opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+
+    &::before {
+      top: -2px;
+      left: initial;
+      right: 16px;
+    }
+
+    &::after {
+      bottom: -2px;
+      left: 16px;
+      right: initial;
+    }
+
 
     @at-root a.btn--disabled {
       pointer-events: none;
