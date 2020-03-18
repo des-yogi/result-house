@@ -115,18 +115,30 @@ h1 {
 
 .h2,
 h2 {
+  margin-top: 0;
   font-size: $font-size--h2;
   font-weight: 700;
   line-height: 28px;
 
   @media (min-width: $screen-xl) {
+    margin-top: 0;
     font-size: $font-size--h2 * 1.455;
     line-height: 45px;
   }
 
   @media (min-width: $screen-xxl) {
+    margin-top: 0;
     font-size: $font-size--h2 * 1.91;
     line-height: 55px;
+  }
+}
+
+*:not(h1) + h2,
+*:not(h1) + .h2 {
+  margin-top: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 64px;
   }
 }
 
@@ -193,12 +205,12 @@ blockquote,
 pre,
 address,
 figure {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-weight: inherit;
   color: currentColor;
 
   & + & {
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 
   &:last-child {

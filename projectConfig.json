@@ -35,7 +35,8 @@
     "index-intro": [],
     "index-features": [],
     "download-panel": [],
-    "index-stages": []
+    "index-stages": [],
+    "typical-houses": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

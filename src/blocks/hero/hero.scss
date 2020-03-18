@@ -1,11 +1,6 @@
 .hero {
   position: relative;
   background-color: $white;
-  margin-bottom: 42px;
-
-  @media (min-width: $screen-md) {
-    margin-bottom: 64px;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -27,5 +22,21 @@
 
   &__title {
     margin: 0;
+  }
+
+  &__logo-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 70%;
+    }
   }
 }

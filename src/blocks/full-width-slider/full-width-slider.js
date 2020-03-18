@@ -1,11 +1,14 @@
 (function(){
   var indexFull = new Swiper('.full-width-slider', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 0,
     //loop: true,
+    preloadImages: false,
+    lazy: true,
+    watchSlidesVisibility: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.full-width-slider__next',
+      prevEl: '.full-width-slider__prev',
     },
     breakpoints: {
       320: {

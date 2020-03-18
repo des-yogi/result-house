@@ -313,10 +313,49 @@ a {
   color: $main-color;
 }
 
+.gray-bg {
+  background-color: $block-bg;
+}
+
+.striped-gray {
+  background-image: linear-gradient(to right, $inactive-color, $inactive-color 1px, transparent 1px, transparent 15%, $inactive-color 15%, $inactive-color calc(15% + 1px), transparent calc(15% + 1px), transparent 50%, $inactive-color 50%, $inactive-color calc(50% + 1px), transparent calc(50% + 1px), transparent 85%, $inactive-color 85%, $inactive-color calc(85% + 1px), transparent calc(85% + 1px) );
+  border-right: 1px solid $inactive-color;
+
+  @media (min-width: $screen-md) {
+    background-image: repeating-linear-gradient(to right, transparent, transparent 6.5%, $inactive-color 6.5%, $inactive-color calc(6.5% + 1px), transparent calc(6.5% + 1px), transparent 43.5%, $inactive-color 43.5%, $inactive-color calc(43.5% + 1px), transparent calc(43.5% + 1px), transparent 50% );
+    border-left: 1px solid $inactive-color;
+    border-right: none;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-image: repeating-linear-gradient(to right, transparent, transparent 12%, $inactive-color 12%, $inactive-color calc(12% + 1px), transparent calc(12% + 1px), transparent 38%, $inactive-color 38%, $inactive-color calc(38% + 1px), transparent calc(38% + 1px), transparent 50% );
+    border-left: 1px solid $inactive-color;
+    border-right: none;
+  }
+}
+
+.text-block-content {
+  padding: 42px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+}
+
 .content-col {
   @include col(xs, 16);
   @include col(md, 14);
   @include col(lg, 15);
+}
+
+.text-block-col {
+  @include col(xs, 16);
+  @include col-offset(md, 1);
+  @include col(md, 12);
+  @include col-offset(xl, 2);
+  @include col(xl, 11);
+  @include col-offset(xxl, 3);
+  @include col(xxl, 9);
 }
 
 /* &__element {
@@ -339,8 +378,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  height: 32px;
   padding: 0 12px;
   background-color: $white;
+
+  @media (min-width: $screen-xl) {
+    height: 42px;
+  }
 }
 
 .swiper-button-prev,
@@ -348,6 +392,7 @@ a {
   position: static;
   width: 42px;
   height: 32px;
+  margin: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 10px;

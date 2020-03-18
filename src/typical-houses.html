@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Typical Houses</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main  typical-houses" role="main">
+
+        <div class="hero">
+          <div class="embed-responsive  embed-responsive--18-9  hero__img">
+            <picture>
+              <source data-srcset="img/hero-2-bg.webp" media="(min-width: 1366px)" type="image/webp">
+              <source data-srcset="img/hero-2-bg.jpg" media="(min-width: 1366px)">
+              <!-- 1920x960 -->
+              <source data-srcset="img/hero-2-bg.webp" media="(min-width: 1200px)" type="image/webp">
+              <source data-srcset="img/hero-2-bg.jpg" media="(min-width: 1200px)">
+              <!-- 1366x683 -->
+              <source data-srcset="img/hero-2-bg.webp" media="(min-width: 768px)" type="image/webp">
+              <source data-srcset="img/hero-2-bg.jpg" media="(min-width: 768px)">
+              <!-- 1200x600 -->
+              <source data-srcset="img/hero-2-bg.webp" media="(min-width: 480px)" type="image/webp">
+              <source data-srcset="img/hero-2-bg.jpg" media="(min-width: 480px)">
+              <!-- 768x384 -->
+              <source data-srcset="img/hero-2-bg.webp" type="image/webp">
+              <img class="b-lazy" data-src="img/hero-2-bg.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Hero" title="Hero" width="480" height="240">
+            </picture>
+          </div>
+          <div class="hero__logo-overlay">
+            <img src="img/rezult-house-logo-rw.svg" alt="Rezult House" width="210" height="57">
+          </div>
+          <!-- <div class="hero__title-wrapper">
+            <div class="container">
+              <h1 class="hero__title">Заголовок h1</h1>
+            </div>
+          </div> -->
+        </div>
+
+
+        <section class="typical-houses__block  gray-bg">
+
+          <div class="container">
+
+            <div class="typical-houses__block-inner  striped-gray">
+              <div class="row">
+                <div class="text-block-col">
+                  <div class="text-block-content">
+                    <h1>Typical <span class="colored">Houses</span></h1>
+                    <h2 class="typical-houses__block-title">Build Your <span class="colored">House</span> with <span class="colored">Rezult</span></h2>
+                    <p>Intelligent processing guarantees a cost-effective and individual final product. Energy and environmentally friendly solutions allow you to use wood with a good conscience. Binderholz produces sophisticated solutions in wood. Dealing responsibly with this wonderful raw material and the environment guarantees quality products. In addition to the complete range of solid wood products for innovative timber construction projects, binderholz also produces biofuels.</p>
+                    <p>Thus guaranteeing 100% processing of wood resources. We take care to find the right raw material. Intelligent processing guarantees a cost-effective and individual final product. Energy and environmentally friendly solutions allow you to use wood with a good conscience. binderholz produces sophisticated solutions in wood.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="home-search">
+
+          <div class="container">
+
+            <h2>Find your house</h2>
+
+            <div class="row">
+              <div class="home-search__filter-col">
+                <div class="home-search__filter"></div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="home-search__gallery-col">
+                <a href="#" class="home-search-card">
+                  <div class="embed-responsive  embed-responsive--4-3  home-search-card__img">
+                    <img src="img/" alt="" width="" height="">
+                  </div>
+                  <div class="home-search-card__text">
+                    <h5>Aurora House</h5>
+                    <ul class="list-nostyled  home-search-card__options">
+                      <li>2 Bedrooms</li>
+                      <li>1 Storeys</li>
+                      <li>106 sq.m</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="swiper-container  full-width-slider">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide  full-width-slider__slide">
+              <picture>
+                <source srcset="img/full-width-slider-img-1.webp" type="image/webp">
+                <img class="" src="img/full-width-slider-img-1.jpg" alt="Фото" width="" height="">
+              </picture>
+            </div>
+
+            <div class="swiper-slide  full-width-slider__slide">
+              <picture>
+                <source srcset="img/full-width-slider-img-2.webp" type="image/webp">
+                <img class="" src="img/full-width-slider-img-2.jpg" alt="Фото" width="" height="">
+              </picture>
+            </div>
+
+            <div class="swiper-slide  full-width-slider__slide">
+              <picture>
+                <source srcset="img/full-width-slider-img-1.webp" type="image/webp">
+                <img class="" src="img/full-width-slider-img-1.jpg" alt="Фото" width="" height="">
+              </picture>
+            </div>
+
+          </div>
+
+          <div class="slider-controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/aside-block/aside-block.html')
+
+  </div>
+
+  @@include('blocks/mob-nav/mob-nav.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

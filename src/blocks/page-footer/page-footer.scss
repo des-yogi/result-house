@@ -1,10 +1,5 @@
 .page-footer {
-  padding: 32px 0 16px;
   background-color: $block-bg;
-
-  @media (min-width: $screen-xl) {
-    padding-top: 64px;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -14,6 +9,14 @@
     &:hover,
     &:focus {
       text-decoration: underline;
+    }
+  }
+
+  &__inner {
+    padding: 32px 0 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
     }
   }
 
