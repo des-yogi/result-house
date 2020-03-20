@@ -1,0 +1,79 @@
+.options-block {
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      @include col-offset(xl, 2);
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow-y: hidden;
+    height: 100%;
+    padding: 24px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.06), 4px 0 8px rgba(0, 0, 0, 0.06), 16px 0 24px rgba(0, 0, 0, 0.06), 24px 0 32px rgba(0, 0, 0, 0.08);
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 128px;
+      height: 12px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: $main-color;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__btn-col {
+    @include col(xs, 16);
+    @include col-offset(md, 4);
+    @include col(md, 6);
+    @include col-offset(xl, 6);
+    @include col(xl, 4);
+    margin-top: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 32px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background-size: 20px 20px;
+    background-image: svg-load('../blocks/sprite-svg/svg/smile-icon.svg', fill=$white);
+  }
+}

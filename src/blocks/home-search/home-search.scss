@@ -1,0 +1,48 @@
+.home-search {
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__filter-col {
+
+  }
+
+  &__filter {
+
+  }
+
+  &__gallery-col {
+    @include col(xs, 16);
+    @include col(md, 14);
+    @include col(lg, 15);
+  }
+
+  &__card-col {
+    @include col(xs, 16);
+    @include col(md, 8);
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(-n+2) {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

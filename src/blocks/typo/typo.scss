@@ -120,6 +120,10 @@ h2 {
   font-weight: 700;
   line-height: 28px;
 
+  @media (min-width: $screen-md) {
+    margin-top: 0;
+  }
+
   @media (min-width: $screen-xl) {
     margin-top: 0;
     font-size: $font-size--h2 * 1.455;
@@ -133,14 +137,6 @@ h2 {
   }
 }
 
-*:not(h1) + h2,
-*:not(h1) + .h2 {
-  margin-top: 42px;
-
-  @media (min-width: $screen-md) {
-    margin-top: 64px;
-  }
-}
 
 .h3,
 h3 {

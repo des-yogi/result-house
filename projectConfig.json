@@ -36,7 +36,13 @@
     "index-features": [],
     "download-panel": [],
     "index-stages": [],
-    "typical-houses": []
+    "typical-houses": [],
+    "home-search": [],
+    "home-search-card": [],
+    "scheme-slider": [],
+    "options-block": [],
+    "news": [],
+    "news-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

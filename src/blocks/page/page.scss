@@ -311,6 +311,10 @@ a {
 
 .colored {
   color: $main-color;
+
+  &--new-line-add {
+    display: block;
+  }
 }
 
 .gray-bg {
@@ -340,6 +344,11 @@ a {
   @media (min-width: $screen-md) {
     padding: 64px 0;
   }
+
+  &--nopadding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
 .content-col {
@@ -356,6 +365,13 @@ a {
   @include col(xl, 11);
   @include col-offset(xxl, 3);
   @include col(xxl, 9);
+}
+
+.publishedon {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $secondary-color;
 }
 
 /* &__element {

@@ -1,0 +1,81 @@
+.scheme-slider {
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__top {
+    @include col(xs, 16);
+    @include col(md, 14);
+    @include col-offset(xxl, 2);
+    @include col(xxl, 11);
+    margin-left: 0;
+  }
+
+  &__main-slide {
+
+  }
+
+  &__main-img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__thumbs {
+    @include col(xs, 16);
+    @include col(md, 14);
+    @include col(xxl, 13);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 0;
+
+    @media (min-width: $screen-md) {
+      padding-top: 24px;
+    }
+  }
+
+  &__thumb-slide {
+    cursor: pointer;
+  }
+
+  &__thumb-img {
+    //width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: $screen-md) {
+      height: 116px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 162px;
+    }
+  }
+
+  .swiper-slide-thumb-active {
+
+    #{$block-name}__thumb-img {
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.06), 4px 0 8px rgba(0, 0, 0, 0.06), 16px 0 24px rgba(0, 0, 0, 0.06), 24px 0 32px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__thumb-caption {
+    margin-top: 0;
+    font-size: 0;
+    visibility: hidden;
+
+    @media (min-width: $screen-md) {
+      padding-top: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.news {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 16);
+    @include col(md, 14);
+    @include col(lg, 15);
+  }
+
+  &__content {
+
+  }
+}
