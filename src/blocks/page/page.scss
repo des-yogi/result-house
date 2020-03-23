@@ -345,6 +345,13 @@ a {
     padding: 64px 0;
   }
 
+  img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 2em 0;
+  }
+
   &--nopadding {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -374,6 +381,7 @@ a {
   color: $secondary-color;
 }
 
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
@@ -389,7 +397,7 @@ a {
 .slider-controls {
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   display: flex;
   flex-wrap: wrap;

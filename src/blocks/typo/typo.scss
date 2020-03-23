@@ -54,13 +54,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (min-width: $screen-lg) {
-      //font-size: $font-size * 1.125;
-    }
-
-    @media (min-width: $screen-xl) {
-      //font-size: $font-size * 1.25;
-    }
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size * 1.125;
+  }
 
   // text-rendering: optimizeLegibility;
   // Partial support in Android browser versions is due to a serious bug where text-rendering: optimizeLegibility causes custom web fonts to not render!!!
@@ -202,6 +198,7 @@ pre,
 address,
 figure {
   margin-bottom: 1em;
+  font-size: inherit;
   font-weight: inherit;
   color: currentColor;
 

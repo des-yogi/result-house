@@ -42,7 +42,9 @@
     "scheme-slider": [],
     "options-block": [],
     "news": [],
-    "news-card": []
+    "news-card": [],
+    "thumbs-gallery": [],
+    "project": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

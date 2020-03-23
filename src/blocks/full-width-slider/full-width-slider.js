@@ -2,10 +2,9 @@
   var indexFull = new Swiper('.full-width-slider', {
     slidesPerView: 1,
     spaceBetween: 0,
-    //loop: true,
+    loop: true,
     preloadImages: false,
     lazy: true,
-    watchSlidesVisibility: true,
     navigation: {
       nextEl: '.full-width-slider__next',
       prevEl: '.full-width-slider__prev',
