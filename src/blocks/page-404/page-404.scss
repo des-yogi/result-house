@@ -1,0 +1,62 @@
+.page-404 {
+  padding: 42px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-col {
+    @include col(xs, 16);
+    @include col(md, 7);
+    @include col-offset(xl, 1);
+    @include col(xl, 4);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 16);
+    @include col(md, 7);
+    @include col-offset(xl, 2);
+    @include col(xl, 7);
+    @include col-offset(xxl, 1);
+    @include col(xxl, 8);
+  }
+
+  &__text {
+
+    h1,
+    .h1 {
+
+      @media (min-width: $screen-xxl) {
+        padding-top: 35px;
+      }
+    }
+
+    .h4 {
+      display: block;
+      margin: 24px 0;
+    }
+
+    .btn {
+      min-width: 150px;
+
+      @media (min-width: $screen-xl) {
+        min-width: 215px;
+      }
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

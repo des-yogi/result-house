@@ -186,4 +186,10 @@
       opacity: 1;
     }
   }
+
+  &--submit {
+    width: 100%;
+    background-size: 16px 10px;
+    background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$white);
+  }
 }

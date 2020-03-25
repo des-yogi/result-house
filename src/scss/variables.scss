@@ -32,6 +32,7 @@ $inactive-color:              #d7d7d7;
 $text-color:                  $secondary-color;
 $title-color:                 $secondary-color;
 $text-muted:                  #828282;
+$disabled-color:              $text-muted;
 
 $body-bg:                     #fff;
 $block-bg:                    #f4f4f4;
@@ -44,7 +45,7 @@ $border-color:                #f3f3f3;
 // Базовая типографика
 
 $font-size:                   16px;
-$font-size--sm:               14px;
+$font-size-sm:                14px;
 
 $font-size--h1:               23px;
 $font-size--h2:               22px;
@@ -87,7 +88,7 @@ $grid-gutter-width:           32px;
 
 // Разное
 
-$field-padding-vertical:      6px;
+$field-padding-vertical:      5px;
 $field-padding-horizontal:    16px;
 
 $border-radius:               4px;

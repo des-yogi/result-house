@@ -530,7 +530,7 @@
 
             <div class="row">
               <div class="options-block__btn-col">
-                <button class="btn  btn--secondary  options-block__btn" type="button">Let's talk</button>
+                <button class="btn  btn--secondary  options-block__btn" type="button" data-toggle="modal" data-target="#feedbackModal">Let's talk</button>
               </div>
             </div>
 
@@ -570,6 +570,10 @@
   </div>
 
   @@include('blocks/mob-nav/mob-nav.html')
+
+  @@include('blocks/feedback-modal/feedback-modal.html')
+
+  @@include('blocks/search-modal/search-modal.html')
 
   @@include('_include/page_bottom.html')
 

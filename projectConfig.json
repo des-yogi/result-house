@@ -44,7 +44,19 @@
     "news": [],
     "news-card": [],
     "thumbs-gallery": [],
-    "project": []
+    "project": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-text": [],
+    "field-actions": [],
+    "page-404": [],
+    "contact-form": [],
+    "contacts": [],
+    "feedback-modal": [],
+    "search-modal": [],
+    "search-result": [],
+    "downloads": [],
+    "project-map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

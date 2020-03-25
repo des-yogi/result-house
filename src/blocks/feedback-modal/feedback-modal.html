@@ -1,0 +1,76 @@
+<!--DEV
+@ @include('blocks/feedback-modal/feedback-modal.html')
+-->
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalTitle" aria-hidden="true" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header  modal-header--feedback">
+        <h5 class="modal-title  modal-title--feedback  h2" id="feedbackModalTitle"><span>Feedback</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body  modal-body--feedback">
+
+        <form id="feedbackForm" class="contact-form" action="#" method="post">
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="" placeholder="Your Name" required>
+              <!-- <span class="field-text__help-text">Ошибка</span> -->
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="company" value="" placeholder="Company Name">
+              <!-- <span class="field-text__help-text">Ошибка</span> -->
+            </span>
+          </label>
+
+          <div class="field-text__wrapper">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="country" value="" placeholder="Country">
+                <!-- <span class="field-text__help-text">Ошибка</span> -->
+              </span>
+            </label>
+
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="city" value="" placeholder="City">
+                <!-- <span class="field-text__help-text">Ошибка</span> -->
+              </span>
+            </label>
+          </div>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="tel" name="tel" value="" placeholder="Phone" required>
+              <!-- <span class="field-text__help-text">Ошибка</span> -->
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" value="" placeholder="Your comment…" required></textarea>
+              <!-- <span class="field-text__help-text">Ошибка</span> -->
+            </span>
+          </label>
+
+          <div class="field-actions">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">I agree with the processing of personal data</span>
+              </label>
+            </div>
+            <input class="btn  btn--secondary  btn--submit" type="submit" name="" value="Send">
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
