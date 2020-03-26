@@ -120,7 +120,7 @@ $( document ).ready( function() {
 }());
 
 (function () {
-  const submitBtn = document.querySelector('.btn-submit');
+  const submitBtn = document.querySelector('.btn--submit');
   const agreementCheckbox = document.querySelector('#agreement');
   const agreementHandler = function (e) {
     if (!this.checked) {

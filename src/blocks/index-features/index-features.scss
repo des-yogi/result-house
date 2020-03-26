@@ -1,0 +1,34 @@
+.index-features {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__dignity {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 1em;
+
+    li {
+      font-weight: 600;
+
+      &::after {
+        display: inline-block;
+        vertical-align: baseline;
+        content: "|";
+        color: $main-color;
+        margin: 0 14px;
+      }
+
+      &:last-child {
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

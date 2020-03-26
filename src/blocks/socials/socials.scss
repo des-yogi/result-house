@@ -1,9 +1,87 @@
-// В этом файле должны быть стили для БЭМ-блока socials, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .socials {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-out;
+
+    &--fb {
+      background-size: 18px;
+      background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/facebook-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--lin {
+      background-size: 18px;
+      background-image: svg-load('../blocks/socials/bg-img/linkedin-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/linkedin-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--insta {
+      background-size: 18px;
+      background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/instagram-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--be {
+      background-size: 18px;
+      background-image: svg-load('../blocks/socials/bg-img/behance-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/behance-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--drib {
+      background-size: 18px;
+      background-image: svg-load('../blocks/socials/bg-img/dribbble-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/dribbble-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--you {
+      background-size: 20px 14px;
+      background-image: svg-load('../blocks/socials/bg-img/youtube-icon.svg', fill=$secondary-color);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/youtube-icon.svg', fill=$main-color);
+      }
+    }
+  }
 }

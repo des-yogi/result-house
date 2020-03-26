@@ -31,6 +31,7 @@
 
   &__content {
     flex-grow: 1;
+    position: relative;
   }
 
   &__footer-wrapper {
@@ -226,8 +227,8 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   background: none;
 
   @media (min-width: $screen-md) {
@@ -263,8 +264,8 @@ a {
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
 .row {
   @include row(
-    $xs-grid-gutter:  30px,
-    $sm-grid-gutter:  30px,
+    $xs-grid-gutter:  $grid-gutter-width,
+    $sm-grid-gutter:  $grid-gutter-width,
     $md-grid-gutter:  $grid-gutter-width,
     $lg-grid-gutter:  $grid-gutter-width,
     $xl-grid-gutter:  $grid-gutter-width,
@@ -308,11 +309,78 @@ a {
   }
 }
 
+.colored {
+  color: $main-color;
+
+  &--new-line-add {
+    display: block;
+  }
+}
+
+.gray-bg {
+  background-color: $block-bg;
+}
+
+.striped-gray {
+  background-image: linear-gradient(to right, $inactive-color, $inactive-color 1px, transparent 1px, transparent 15%, $inactive-color 15%, $inactive-color calc(15% + 1px), transparent calc(15% + 1px), transparent 50%, $inactive-color 50%, $inactive-color calc(50% + 1px), transparent calc(50% + 1px), transparent 85%, $inactive-color 85%, $inactive-color calc(85% + 1px), transparent calc(85% + 1px) );
+  border-right: 1px solid $inactive-color;
+
+  @media (min-width: $screen-md) {
+    background-image: repeating-linear-gradient(to right, transparent, transparent 6.5%, $inactive-color 6.5%, $inactive-color calc(6.5% + 1px), transparent calc(6.5% + 1px), transparent 43.5%, $inactive-color 43.5%, $inactive-color calc(43.5% + 1px), transparent calc(43.5% + 1px), transparent 50% );
+    border-left: 1px solid $inactive-color;
+    border-right: none;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-image: repeating-linear-gradient(to right, transparent, transparent 12%, $inactive-color 12%, $inactive-color calc(12% + 1px), transparent calc(12% + 1px), transparent 38%, $inactive-color 38%, $inactive-color calc(38% + 1px), transparent calc(38% + 1px), transparent 50% );
+    border-left: 1px solid $inactive-color;
+    border-right: none;
+  }
+}
+
+.text-block-content {
+  padding: 42px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  &--nopadding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
 .content-col {
   @include col(xs, 16);
   @include col(md, 14);
   @include col(lg, 15);
 }
+
+.text-block-col {
+  @include col(xs, 16);
+  @include col-offset(md, 1);
+  @include col(md, 12);
+  @include col-offset(xl, 2);
+  @include col(xl, 11);
+  @include col-offset(xxl, 3);
+  @include col(xxl, 9);
+}
+
+.publishedon {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $secondary-color;
+}
+
 
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
@@ -326,3 +394,86 @@ a {
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 
+.slider-controls {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 32px;
+  padding: 0 12px;
+  background-color: $white;
+
+  @media (min-width: $screen-xl) {
+    height: 42px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  width: 42px;
+  height: 32px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 10px;
+  user-select: none;
+
+  @media (min-width: $screen-xl) {
+    height: 42px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  transform: scale(-1, 1);
+  background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$secondary-color);
+
+  &:hover,
+  &:focus {
+    background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$main-color);
+  }
+}
+
+.swiper-button-next {
+  margin-left: 12px;
+  background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$secondary-color);
+
+  &:hover,
+  &:focus {
+    background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$main-color);
+  }
+
+  @media (min-width: $screen-md) {
+    margin-left: 24px;
+  }
+}
+
+.project-map {
+
+  &__container {
+    width: 100%;
+    height: 420px;
+    margin-top: 24px;
+
+    @media (min-width: $screen-md) {
+      height: 440px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 545px;
+      margin-top: 42px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      height: 630px;
+    }
+  }
+}

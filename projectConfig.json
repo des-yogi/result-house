@@ -31,14 +31,39 @@
     "hero": [],
     "socials": [],
     "copyrights": [],
-    "full-width-slider": []
+    "full-width-slider": [],
+    "index-intro": [],
+    "index-features": [],
+    "download-panel": [],
+    "index-stages": [],
+    "typical-houses": [],
+    "home-search": [],
+    "home-search-card": [],
+    "scheme-slider": [],
+    "options-block": [],
+    "news": [],
+    "news-card": [],
+    "thumbs-gallery": [],
+    "project": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-text": [],
+    "field-actions": [],
+    "page-404": [],
+    "contact-form": [],
+    "contacts": [],
+    "feedback-modal": [],
+    "search-modal": [],
+    "search-result": [],
+    "downloads": [],
+    "project-map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/css/swiper.min.css",
     "../../node_modules/mhead-js/dist/mhead.css",
-    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

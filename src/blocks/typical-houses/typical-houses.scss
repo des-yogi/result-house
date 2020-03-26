@@ -1,0 +1,13 @@
+
+.typical-houses {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__block {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
+  }
+}

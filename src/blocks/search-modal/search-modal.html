@@ -1,0 +1,32 @@
+<!--DEV
+@ @include('blocks/search-modal/search-modal.html')
+-->
+
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header  modal-header--feedback">
+        <h5 class="modal-title  modal-title--feedback  h2" id="searchModalTitle"><span>Search</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body  modal-body--feedback">
+
+        <form id="searchForm" class="contact-form" action="#" method="post">
+
+          <div class="field-text__btn-group">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="search" name="search" value="" placeholder="Find anything here…" required>
+                <!-- <span class="field-text__help-text">Ошибка</span> -->
+              </span>
+            </label>
+            <button class="btn  btn__icon  btn__icon--search" type="submit"></button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

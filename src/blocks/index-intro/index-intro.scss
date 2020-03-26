@@ -1,0 +1,28 @@
+.index-intro {
+  padding-top: 42px;
+  margin-bottom: 42px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 11);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 9);
+  }
+
+  &__text {
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+}

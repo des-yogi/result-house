@@ -1,0 +1,67 @@
+.project {
+  padding: 42px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__descr-col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(xl, 0);
+    @include col(xl, 8);
+  }
+
+  &__spec-col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(xl, 0);
+    @include col(xl, 7);
+    margin-top: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__descr {
+
+    @media (min-width: $screen-xl) {
+      padding-top: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__spec {
+    padding: 16px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.04), 0 24px 32px rgba(0, 0, 0, 0.04);
+
+    @media (min-width: $screen-md) {
+      padding: 24px;
+    }
+  }
+
+  &__spec-table {
+
+    td {
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        font-weight: 600;
+        text-align: right;
+        color: $main-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.index-stages {
+  margin-bottom: 42px;
+  background-color: $block-bg;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    padding: 24px 0;
+
+    @media (min-width: $screen-md) {
+      padding: 32px 0;
+    }
+  }
+
+  &__block {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 16);
+    @include col-offset(md, 1);
+    @include col(md, 12);
+    @include col-offset(lg, 0);
+    @include col(lg, 7);
+    @include col(xxl, 6);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 16);
+    @include col-offset(md, 2);
+    @include col(md, 10);
+    @include col-offset(lg, 1);
+    @include col(lg, 6);
+    @include col-offset(xxl, 1);
+    @include col(xxl, 6);
+  }
+
+  &__img {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: svg-load('../blocks/index-stages/bg-img/lens-icon.svg', fill=$secondary-color);
+      transition: opacity 0.3s;
+
+      @media (min-width: $screen-lg) {
+        opacity: 0;
+      }
+    }
+
+    &:hover,
+    &:focus {
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    img {
+      display: block;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__title {
+    margin-top: 0 !important;
+  }
+}
