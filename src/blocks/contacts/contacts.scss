@@ -50,24 +50,12 @@
     font-weight: 600;
   }
 
-  &__title {
-
-  }
-
   &__subtitle {
     margin-top: 24px;
 
     @media (min-width: $screen-xl) {
       margin-top: 32px;
     }
-  }
-
-  &__list {
-
-  }
-
-  &__item {
-
   }
 
   &__address {

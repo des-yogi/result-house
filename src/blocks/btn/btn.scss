@@ -154,8 +154,6 @@
     }
   }
 
-
-
   &--secondary {
     padding-right: 52px;
     text-align: left;
@@ -191,5 +189,15 @@
     width: 100%;
     background-size: 16px 10px;
     background-image: svg-load('../blocks/sprite-svg/svg/right-arrow-icon.svg', fill=$white);
+  }
+
+  &--download {
+    width: 100%;
+    background-size: 14px 16px;
+    background-image: svg-load('../blocks/sprite-svg/svg/download-icon.svg', fill=$white);
+
+    @media (min-width: $screen-md) {
+      max-width: 240px;
+    }
   }
 }
