@@ -7,9 +7,17 @@
   &__img {
     min-height: 150px;
     //max-height: 960px;
+    background-color: $main-color;
+    overflow: hidden;
 
-    img {
+    img,
+    video {
       display: block;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: none;
     }
   }
 

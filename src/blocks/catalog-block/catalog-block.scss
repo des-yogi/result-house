@@ -1,0 +1,75 @@
+.catalog-block {
+  margin: 42px 0;
+
+  @media (min-width: $screen-md) {
+    margin: 64px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-col {
+    @include col(xs, 16);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xxl, 5);
+  }
+
+  &__img-col {
+    @include col(xs, 16);
+    @include col(md, 14);
+    @include col(lg, 9);
+    @include col(xxl, 10.3);
+  }
+
+  &__text {
+    padding: 24px 16px;
+    color: $white;
+    background-color: $secondary-color;
+    border-radius: 16px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 42px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+
+    .h4 {
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn-wrapper {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    @media (min-width: $screen-lg) {
+      transform: translateX(-32px);
+    }
+
+    @media (min-width: $screen-xxl) {
+      transform: translate(-32px, -5px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

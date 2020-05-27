@@ -200,4 +200,18 @@
       max-width: 240px;
     }
   }
+
+  &--catalog {
+    width: 100%;
+    background-size: 16px 20px;
+    background-image: svg-load('../blocks/sprite-svg/svg/text-icon.svg', fill=$white);
+
+    @media (min-width: $screen-md) {
+      max-width: 220px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 230px;
+    }
+  }
 }

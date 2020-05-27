@@ -18,12 +18,14 @@
   }
 
   @media (min-width: $screen-xl) {
-    background-position: left bottom;
+    //background-position: left bottom;
+    background-position: left -7px bottom;
     background-size: 702px 573px;
   }
 
   @media (min-width: $screen-xxl) {
     background-size: 976px 797px;
+    background-position: left -48px bottom;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -141,8 +143,12 @@
   &__nav {
     padding-top: 60px;
 
+    @media (min-width: $screen-lg) {
+      padding-top: 12px;
+    }
+
     @media (min-width: $screen-xl) {
-      padding-top: 80px;
+      padding-top: 43px;
     }
   }
 
