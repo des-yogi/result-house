@@ -1,0 +1,34 @@
+.badge {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 4px 16px 2px 48px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $main-color;
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  border-radius: 32px;
+
+  @media (min-width: $screen-xxl) {
+    left: 24px;
+    bottom: 24px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &--top {
+    background-size: 21px 21px;
+    background-image: svg-load('../blocks/badge/bg-img/top.svg', fill=$white);
+  }
+
+  &--hit {
+    background-size: 16px 21px;
+    background-image: svg-load('../blocks/badge/bg-img/hit.svg', fill=$white);
+  }
+}

@@ -1,0 +1,62 @@
+<!--DEV
+@ @include('blocks/catalog-block/catalog-block.html')
+-->
+
+<section class="container  catalog-block">
+  <div class="row">
+
+    <div class="catalog-block__text-col">
+
+      <div class="catalog-block__text">
+        <h2 class="catalog-block__title">Каталог объектов</h2>
+        <p>Посмотрите наш каталог с огромным количеством объектов которые мы воплотили в жизнь.</p>
+
+        <p class="catalog-block__btn-wrapper">
+          <a href="#" class="btn  btn--secondary  btn--catalog" download>Скачать каталог</a>
+        </p>
+
+        <p class="h4">И даже приложение!</p>
+        <p>Установите приложение себе на смартфон и посмотрите проекции уникальных домов с разных ракурсов.</p>
+
+        <div class="app-download">
+          <span class="app-download__action">Загрузите сейчас</span>
+          <div class="app-download__inner">
+            <a href="#" class="app-download__link  app-download__link--google" title="Загрузить с Google Play" target="_blank" rel="nofollow noopener">
+              <img src="img/google-play.svg" alt="Google Play" width="110" height="32">
+            </a>
+            <a href="#" class="app-download__link  app-download__link--apple" title="Загрузить с AppStore" target="_blank" rel="nofollow noopener">
+              <img src="img/app-store.svg" alt="AppStore" width="108" height="32">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="catalog-block__img-col">
+      <div class="catalog-block__img">
+        <picture>
+          <source data-srcset="img/catalog-dt.webp" media="(min-width: 1366px)" type="image/webp">
+          <source data-srcset="img/catalog-dt.jpg" media="(min-width: 1366px)">
+          <!-- 1113x742 -->
+          <source data-srcset="img/catalog-dt.webp" media="(min-width: 1200px)" type="image/webp">
+          <source data-srcset="img/catalog-dt.jpg" media="(min-width: 1200px)">
+          <!-- 710x473 -->
+          <source data-srcset="img/catalog-mob.webp" media="(min-width: 992px)" type="image/webp">
+          <source data-srcset="img/catalog-mob.jpg" media="(min-width: 992px)">
+          <!-- 975x647 -->
+          <source data-srcset="img/catalog-mob.webp" media="(min-width: 768px)" type="image/webp">
+          <source data-srcset="img/catalog-mob.jpg" media="(min-width: 768px)">
+          <!-- 794x527 -->
+          <source data-srcset="img/catalog-mob.webp" media="(min-width: 480px)" type="image/webp">
+          <source data-srcset="img/catalog-mob.jpg" media="(min-width: 480px)">
+          <!-- 568x377 -->
+          <source data-srcset="img/catalog-mob.webp" type="image/webp">
+          <img class="b-lazy" data-src="img/catalog-mob.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Каталог" width="450" height="299">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</section>

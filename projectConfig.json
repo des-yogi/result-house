@@ -56,7 +56,11 @@
     "search-modal": [],
     "search-result": [],
     "downloads": [],
-    "project-map": []
+    "project-map": [],
+    "cookie-popup": [],
+    "badge": [],
+    "catalog-block": [],
+    "app-download": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -78,6 +82,7 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./src/js/libs/cookieconsent.js",
     "./src/js/libs/popper.min.js",
     "./src/js/libs/util.min.js",
     "./src/js/libs/collapse.js"

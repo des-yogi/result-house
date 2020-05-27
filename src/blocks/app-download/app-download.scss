@@ -1,0 +1,39 @@
+.app-download {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__action {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: inherit;
+    font-weight: 600;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+
+    & + & {
+      margin-left: 24px;
+    }
+
+    img {
+      display: block;
+    }
+
+    &--google {
+
+    }
+
+    &--apple {
+
+    }
+
+  }
+}
